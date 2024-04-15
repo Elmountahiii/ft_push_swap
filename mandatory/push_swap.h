@@ -37,5 +37,9 @@ char	**ft_split(char *str);
 t_stack  *create_node(t_stack *parent ,int nbr);
 void    add_node_back(t_stack **stack, int nbr);
 int     ft_atoi(char *nbr);
-void    init_stack(t_stack **a,int argc, char **argv);
+void    ft_init_stack(t_stack **a,int argc, char **argv);
+void    print_stack_content(t_stack *stack);
+int     ft_stack_len(t_stack *stack);
+int     ft_is_sorted(t_stack *stack);
+int     ft_is_duplicated(t_stack *stack);
 #endif

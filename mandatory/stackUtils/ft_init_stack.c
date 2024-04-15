@@ -1,6 +1,6 @@
 #include "../push_swap.h"
 
-void    init_stack(t_stack **a,int argc, char **argv)
+void    ft_init_stack(t_stack **a,int argc, char **argv)
 {
     int i;
     int j;

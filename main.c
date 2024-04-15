@@ -16,7 +16,11 @@ int main(int argc, char **argv)
    // b = NULL;
     if (argc < 2)
         return 0;
-    init_stack(&a, argc, argv);
+    ft_init_stack(&a, argc, argv);
+    if(ft_is_duplicated(a))
+        ft_exit("Error",1);
+    if (ft_is_sorted(a))
+        return (0);
     print_stack_content(a);
     return 0;
 }
