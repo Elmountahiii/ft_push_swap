@@ -1,4 +1,5 @@
 #include "./mandatory/push_swap.h"
+
 void print_stack_content(t_stack *stack)
 {
     while (stack)
@@ -10,10 +11,10 @@ void print_stack_content(t_stack *stack)
 int main(int argc, char **argv)
 {
     t_stack *a;
-   // t_stack *b;
+   t_stack *b;
 
     a = NULL;
-   // b = NULL;
+   b = NULL;
     if (argc < 2)
         return 0;
     ft_init_stack(&a, argc, argv);
@@ -21,6 +22,6 @@ int main(int argc, char **argv)
         ft_exit("Error",1);
     if (ft_is_sorted(a))
         return (0);
-    print_stack_content(a);
+    ft_push_swap(&a, &b);
     return 0;
 }

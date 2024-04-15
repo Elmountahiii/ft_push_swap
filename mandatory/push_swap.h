@@ -42,4 +42,9 @@ void    print_stack_content(t_stack *stack);
 int     ft_stack_len(t_stack *stack);
 int     ft_is_sorted(t_stack *stack);
 int     ft_is_duplicated(t_stack *stack);
+void    ft_sort_3(t_stack **a);
+int     ft_stack_max(t_stack *stack);
+int     ft_stack_min(t_stack *stack);
+void    ft_split_stack(t_stack **a, t_stack **b, int len);
+void    ft_push_swap(t_stack **a, t_stack **b);
 #endif
