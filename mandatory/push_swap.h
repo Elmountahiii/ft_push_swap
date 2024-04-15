@@ -3,6 +3,7 @@
 
 #include <unistd.h>
 #include <stdlib.h>
+#include <stdio.h>
 #include "../lib/lib.h"
 
 typedef struct s_stack
@@ -30,4 +31,11 @@ void    rra(t_stack **a);
 void    rrb(t_stack **b);
 void    rrr(t_stack **a,t_stack **b);
 void    ft_print(char *str);
+void    ft_exit(char *str,int status);
+int     count_words(char *str);
+char	**ft_split(char *str);
+t_stack  *create_node(t_stack *parent ,int nbr);
+void    add_node_back(t_stack **stack, int nbr);
+int     ft_atoi(char *nbr);
+void    init_stack(t_stack **a,int argc, char **argv);
 #endif
