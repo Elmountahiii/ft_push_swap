@@ -11,5 +11,6 @@ int ft_bring_top_cost(t_stack *stack, int index)
         cost = len - index;
     else
         cost = index;
+    
     return (cost);
 }

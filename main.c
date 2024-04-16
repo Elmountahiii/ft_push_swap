@@ -23,5 +23,6 @@ int main(int argc, char **argv)
     if (ft_is_sorted(a))
         return (0);
     ft_push_swap(&a, &b);
+    print_stack_content(a);
     return 0;
 }

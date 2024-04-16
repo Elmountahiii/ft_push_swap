@@ -61,4 +61,7 @@ int     ft_move_one_cost(t_stack *a, t_stack *b);
 int     ft_move_two_cost(t_stack *a,t_stack *b);
 int     ft_b_bi(t_stack *a,t_stack *b);
 void    ft_bring_top(t_stack **s, int i, void (*r)(t_stack **s), void (*rr)(t_stack **s));
+size_t  ft_get_stack_average(t_stack *stack);
+int     ft_get_stack_last(t_stack *stack);
+int     ft_check_rrr(t_stack *a, t_stack *b);
 #endif
