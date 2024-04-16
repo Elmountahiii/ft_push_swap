@@ -4,6 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <limits.h>
 #include "../lib/lib.h"
 
 typedef struct s_stack
@@ -47,4 +48,17 @@ int     ft_stack_max(t_stack *stack);
 int     ft_stack_min(t_stack *stack);
 void    ft_split_stack(t_stack **a, t_stack **b, int len);
 void    ft_push_swap(t_stack **a, t_stack **b);
+int     ft_bring_top_cost(t_stack *stack, int value);
+int     ft_index_by_value(t_stack *stack, int value);
+int     ft_value_by_index(t_stack *stack, int index);
+void    ft_sort_stack(t_stack **a,t_stack **b);
+int     ft_best_move(t_stack **a, t_stack **b);
+void    ft_update_stack_index(t_stack *a, t_stack *b);
+int     ft_bf_index(t_stack *stack, int value);
+int     ft_has_bf(t_stack *stack, int value);
+int     ft_stack_has_bf(t_stack *a, t_stack *b);
+int     ft_move_one_cost(t_stack *a, t_stack *b);
+int     ft_move_two_cost(t_stack *a,t_stack *b);
+int     ft_b_bi(t_stack *a,t_stack *b);
+void    ft_bring_top(t_stack **s, int i, void (*r)(t_stack **s), void (*rr)(t_stack **s));
 #endif
