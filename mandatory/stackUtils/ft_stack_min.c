@@ -1,14 +1,14 @@
 #include "../push_swap.h"
 
-int ft_stack_min(t_stack *stack)
+t_stack *ft_stack_min(t_stack *stack)
 {
-    int min;
+    t_stack *min;
 
-    min = stack->value;
+    min = stack;
     while (stack)
     {
-        if (stack->value < min)
-            min = stack->value;
+        if (stack->value < min->value)
+            min = stack;
         stack = stack->next;
     }
     return (min);

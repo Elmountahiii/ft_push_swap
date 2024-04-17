@@ -12,6 +12,10 @@ typedef struct s_stack
     struct s_stack *prev;
     int value;
     int index;
+    int top;
+    int cost;
+    int best_move;
+    struct s_stack *target;
     struct  s_stack *next;
 } t_stack;
 
@@ -45,7 +49,8 @@ int     ft_is_sorted(t_stack *stack);
 int     ft_is_duplicated(t_stack *stack);
 void    ft_sort_3(t_stack **a);
 int     ft_stack_max(t_stack *stack);
-int     ft_stack_min(t_stack *stack);
+int     ft_stack_min_index(t_stack *stack);
+t_stack *ft_stack_min(t_stack *stack);
 void    ft_split_stack(t_stack **a, t_stack **b, int len);
 void    ft_push_swap(t_stack **a, t_stack **b);
 int     ft_bring_top_cost(t_stack *stack, int value);
@@ -55,6 +60,7 @@ void    ft_sort_stack(t_stack **a,t_stack **b);
 int     ft_best_move(t_stack **a, t_stack **b);
 void    ft_update_stack_index(t_stack *a, t_stack *b);
 int     ft_bf_index(t_stack *stack, int value);
+t_stack *ft_best_match(t_stack *stack, int value);
 int     ft_has_bf(t_stack *stack, int value);
 int     ft_stack_has_bf(t_stack *a, t_stack *b);
 int     ft_move_one_cost(t_stack *a, t_stack *b);
@@ -64,4 +70,14 @@ void    ft_bring_top(t_stack **s, int i, void (*r)(t_stack **s), void (*rr)(t_st
 size_t  ft_get_stack_average(t_stack *stack);
 int     ft_get_stack_last(t_stack *stack);
 int     ft_check_rrr(t_stack *a, t_stack *b);
+void    ft_sort(t_stack **a,t_stack **b);
+void    ft_setup_nodes(t_stack **a, t_stack **b);
+void    ft_update_positions(t_stack *a, t_stack *b);
+void    ft_get_targets(t_stack *a, t_stack *b);
+void    ft_calculate_cost(t_stack *a, t_stack *b);
+void    ft_mark_best(t_stack *b);
+t_stack *ft_get_best_move(t_stack *b);
+void    ft_revers_move(t_stack **a, t_stack **b,t_stack *bm,void (*f)(t_stack **a,t_stack **b));
+void    ft_rotate_move(t_stack **stack,t_stack *target,void (*r)(t_stack **s),void (*rr)(t_stack **s));
+void    ft_push_best(t_stack **a, t_stack **b);
 #endif

@@ -9,12 +9,12 @@ void ft_sort_stack(t_stack **a,t_stack **b)
         pa(a, b);
     }
     ft_update_stack_index(*a, *b);
-    ft_bring_top(a,ft_index_by_value(*a,ft_stack_min(*a)),ra,rra);
+    ft_bring_top(a,ft_index_by_value(*a,ft_stack_min_index(*a)),ra,rra);
     ft_update_stack_index(*a, *b);
 
     while (*b)
     {
-        ft_bring_top(b,ft_index_by_value(*b,ft_stack_min(*b)),rb,rrb);
+        ft_bring_top(b,ft_index_by_value(*b,ft_stack_min_index(*b)),rb,rrb);
         pa(a, b);
         ra(a);
         ft_update_stack_index(*a, *b);
