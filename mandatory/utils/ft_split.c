@@ -30,6 +30,8 @@ char	**ft_split(char *str)
 	int index;
 	int len ;
 	len = count_words(str);
+	if (len == 0)
+		ft_exit("Error",1);
 	split = malloc(sizeof(char *) * (len + 1));
 	i = 0;
 	index = 0;
