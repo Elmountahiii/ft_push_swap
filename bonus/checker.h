@@ -43,4 +43,6 @@ int     ft_atoi(char *nbr);
 void    ft_exit(char *str,int status);
 void    ft_print(char *str);
 char	**ft_split(char *str);
+void    ft_check_instruction(t_stack **a, t_stack **b,char *str);
+int     ft_stack_len(t_stack *stack);
 #endif

@@ -15,7 +15,6 @@ void    ft_init_stack(t_stack **a,int argc, char **argv)
             char **split = ft_split(argv[i]);
             while (split && split[j])
             {
-                
                add_node_back(a, ft_atoi(split[j]));
                j++;
             }      
