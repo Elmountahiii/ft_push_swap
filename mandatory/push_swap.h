@@ -19,7 +19,6 @@ typedef struct s_stack
     struct  s_stack *next;
 } t_stack;
 
-
 void    push(t_stack **from , t_stack **to);
 void    pa(t_stack **a, t_stack **b);
 void    pb(t_stack **b, t_stack **a);
