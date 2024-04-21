@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <limits.h>
 #include "../lib/lib.h"
+#include "../lib/get_nex_line/get_next_line.h"
 
 typedef struct s_stack
 {

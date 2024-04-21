@@ -1,4 +1,4 @@
-SRC = $(wildcard *.c)
+SRC = $(wildcard *.c) $(wildcard get_nex_line/*.c)
 
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
