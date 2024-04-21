@@ -2,6 +2,6 @@
 
 int main()
 {
-    printf("this is checker \n"); 
+    ft_print("hello.\n");
     return 0;
 }
