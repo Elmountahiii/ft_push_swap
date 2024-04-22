@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:43:05 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 14:45:23 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/22 18:47:13 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,11 @@ void	ft_init_stack(t_stack **a, int argc, char **argv)
 			while (split && split[j])
 			{
 				add_node_back(a, ft_atoi(split[j]));
+				free(split[j]);
 				j++;
 			}
 			i ++;
 		}
+		free(split);
 	}
 }

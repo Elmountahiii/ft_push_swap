@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:39:01 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 16:46:05 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/22 19:44:40 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,19 @@ int	main(int argc, char **argv)
 		return (0);
 	ft_init_stack(&a, argc, argv);
 	if (ft_is_duplicated(a))
+	{
+		ft_free_stack(a);
+		ft_free_stack(b);
 		ft_exit("Error", 1);
-	if (ft_is_sorted(a))
+	}
+	else if(ft_is_sorted(a))
+	{
+		ft_free_stack(a);
+		ft_free_stack(b);
 		return (0);
+	}
 	ft_push_swap(&a, &b);
+	ft_free_stack(a);
+	ft_free_stack(b);
 	return (0);
 }

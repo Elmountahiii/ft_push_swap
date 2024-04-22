@@ -7,7 +7,7 @@ mandatory/operations/push.c mandatory/operations/reversRotate.c mandatory/operat
 mandatory/sort/ft_best_match.c mandatory/sort/ft_calculate_cost.c mandatory/sort/ft_get_best_move.c mandatory/sort/ft_get_targets.c mandatory/sort/ft_mark_best.c mandatory/sort/ft_push_swap.c mandatory/sort/ft_push_best.c mandatory/sort/ft_revers_move.c mandatory/sort/ft_rotate_move.c \
 mandatory/sort/ft_sort_3.c mandatory/sort/ft_sort.c mandatory/sort/ft_split_stack.c mandatory/sort/ft_update_position.c \
 mandatory/stackUtils/ft_get_stack_average.c mandatory/stackUtils/ft_init_stack.c  mandatory/stackUtils/ft_is_duplicated.c mandatory/stackUtils/ft_is_sorted.c mandatory/stackUtils/ft_stack_len.c mandatory/stackUtils/ft_stack_min.c mandatory/stackUtils/ft_update_stack_index.c \
-mandatory/utils/ft_atoi.c mandatory/utils/ft_exit.c mandatory/utils/ft_print.c mandatory/utils/ft_split.c
+mandatory/utils/ft_atoi.c mandatory/utils/ft_exit.c mandatory/utils/ft_print.c mandatory/utils/ft_split.c mandatory/utils/ft_free_stack.c
 OBJ = $(SRC:.c=.o)
 HEADER = mandatory/push_swap.h
 RM = rm -rf
