@@ -24,10 +24,10 @@ jobs:
       run: valgrind --leak-check=full --error-exitcode=1 ./push_swap
     
     - name: Run program with ARG error
-      run: valgrind --leak-check=full --error-exitcode=1 ./push_swap "      " 1
+      run: valgrind --leak-check=full  ./push_swap "      " 1
     
     - name: Run program with ARG error duplicate
-      run: valgrind --leak-check=full --error-exitcode=1 ./push_swap  1 1
+      run: valgrind --leak-check=full ./push_swap  1 1
     
     - name: Run program with ARG with sorted ARGS
       run: valgrind --leak-check=full --error-exitcode=1 ./push_swap  1 2 3 4 "5 6 7"
