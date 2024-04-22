@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:46 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 15:05:38 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/22 17:01:15 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,6 @@ void	ft_revers_move(t_stack **a, t_stack **b, \
 void	ft_rotate_move(t_stack **stack, t_stack *target, \
 	void (*r)(t_stack **s), void (*rr)(t_stack **s));
 void	ft_push_best(t_stack **a, t_stack **b);
+void	ft_free_stack(t_stack *s);
+void	ft_free_array(char **split, int size);
 #endif
