@@ -1,7 +1,7 @@
 NAME = push_swap
 NAME_BONUS = checker
 CC = cc
-CFLAGS = -Wall -Wextra -Werror 
+CFLAGS = -Wall -Wextra -Werror -g
 SRC =  main.c mandatory/nodeUtils/add_node_back.c mandatory/nodeUtils/create_node.c mandatory/nodeUtils/ft_setup_nodes.c \
 mandatory/operations/push.c mandatory/operations/reversRotate.c mandatory/operations/routate.c mandatory/operations/swap.c \
 mandatory/sort/ft_best_match.c mandatory/sort/ft_calculate_cost.c mandatory/sort/ft_get_best_move.c mandatory/sort/ft_get_targets.c mandatory/sort/ft_mark_best.c mandatory/sort/ft_push_swap.c mandatory/sort/ft_push_best.c mandatory/sort/ft_revers_move.c mandatory/sort/ft_rotate_move.c \
