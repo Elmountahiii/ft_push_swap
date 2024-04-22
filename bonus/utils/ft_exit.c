@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_exit.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/21 22:20:32 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/21 22:20:59 by yel-moun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../checker.h"
 
-void ft_exit(char *str,int status)
+void	ft_exit(char *str, int status)
 {
-    ft_print(str);
-    exit(status);
+	ft_print(str);
+	exit(status);
 }

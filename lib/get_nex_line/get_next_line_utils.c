@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 15:42:59 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 14:21:57 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/21 20:08:23 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ char	*ft_strchr(char *str, int c)
 char	*ft_strdup(char *str)
 {
 	char	*str_dup;
-	int	i;
-	int	len;
+	int		i;
+	int		len;
 
 	if (!str)
 		return (NULL);
@@ -57,8 +57,8 @@ char	*ft_strdup(char *str)
 char	*ft_strjoin(char *rest, char *buffer)
 {
 	char	*str_join;
-	int	s1_len;
-	int	i;
+	int		s1_len;
+	int		i;
 
 	if (!rest && buffer)
 		return (ft_strdup(buffer));

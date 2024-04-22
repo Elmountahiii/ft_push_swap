@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   reversRotate.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/21 21:18:43 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/21 21:21:45 by yel-moun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../checker.h"
 
-void reversRotate(t_stack **stack) 
+void	revers_rotate(t_stack **stack)
 {
-    t_stack *last;
-    t_stack *second_last;
-    
-    if (*stack && (*stack)->next)
-    {
-        last = *stack;
-        while (last->next) 
-        {
+	t_stack	*last;
+	t_stack	*second_last;
+
+	if (*stack && (*stack)->next)
+	{
+		last = *stack;
+		while (last->next)
+		{
 			second_last = last;
 			last = last->next;
-        }
+		}
 		second_last->next = NULL;
 		last->prev = NULL;
 		last->next = *stack;
@@ -21,17 +33,18 @@ void reversRotate(t_stack **stack)
 	}
 }
 
-void rra(t_stack **a)
+void	rra(t_stack **a)
 {
-    reversRotate(a);
-}
-void rrb(t_stack **b)
-{
-    reversRotate(b);
+	revers_rotate(a);
 }
 
-void rrr(t_stack **a, t_stack **b)
+void	rrb(t_stack **b)
 {
-    reversRotate(a);
-    reversRotate(b);
+	revers_rotate(b);
+}
+
+void	rrr(t_stack **a, t_stack **b)
+{
+	revers_rotate(a);
+	revers_rotate(b);
 }
