@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stack_len.c                                     :+:      :+:    :+:   */
+/*   ft_init_stack_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 22:12:14 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 22:13:17 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 22:06:08 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 21:56:20 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-int	ft_stack_len(t_stack *stack)
+void	ft_init_stack(t_stack **a, int argc, char **argv)
 {
-	int	len;
+	int		i;
+	int		j;
+	char	**split;
 
-	len = 0;
-	while (stack)
+	i = 1;
+	j = 0;
+	if (argc >= 2)
 	{
-		len++;
-		stack = stack->next;
+		while (i < argc)
+		{
+			j = 0;
+			split = ft_split(argv[i]);
+			while (split && split[j])
+			{
+				add_node_back(a, ft_atoi(split[j]));
+				free(split[j]);
+				j++;
+			}
+			free(split);
+			i ++;
+		}
 	}
-	return (len);
 }

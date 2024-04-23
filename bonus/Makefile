@@ -1,22 +1,24 @@
 NAME = ../checker
 CC= cc
 CFLAGS = -Wall -Wextra -Werror
-SRC = main.c nodeUtils/add_node_back.c nodeUtils/create_node.c \
-operations/push.c operations/reversRotate.c operations/rotate.c operations/swap.c \
-stackUtils/ft_init_stack.c stackUtils/ft_is_duplicated.c stackUtils/ft_is_sorted.c stackUtils/ft_stack_len.c \
-utils/ft_atoi.c utils/ft_check_instruction.c utils/ft_exit.c utils/ft_print.c utils/ft_split.c
-Header = checker.h
+SRC = main_bonus.c nodeUtils/add_node_back_bonus.c nodeUtils/create_node_bonus.c \
+operations/push_bonus.c operations/reversRotate_bonus.c operations/rotate_bonus.c operations/swap_bonus.c \
+stackUtils/ft_init_stack_bonus.c stackUtils/ft_is_duplicated_bonus.c stackUtils/ft_is_sorted_bonus.c stackUtils/ft_stack_len_bonus.c \
+utils/ft_atoi_bonus.c utils/ft_check_instruction_bonus.c utils/ft_exit_bonus.c utils/ft_print_bonus.c utils/ft_split_bonus.c utils/ft_free_stack_bonus.c \
+utils/ft_read_instruction_bonus.c
 OBJ = $(SRC:.c=.o)
 RM = rm -rf
 
-all : $(NAME)
+all : $(NAME) 
 
-%.o : %.c $(Header)
-	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME) : $(OBJ) ../lib/*.c
+$(NAME) : $(OBJ) checker_bonus.h ../lib/*.c 
 		cd .. && cd lib && make
 		$(CC) $(CFLAGS) $(OBJ) ../lib/lib.a -o $(NAME)
+
+%.o : %.c checker_bonus.h
+	$(CC) $(CFLAGS) -c $< -o $@
+
 clean :
 	$(RM) $(OBJ)
 	cd .. && cd lib && make clean

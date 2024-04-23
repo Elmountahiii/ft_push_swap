@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_sorted.c                                     :+:      :+:    :+:   */
+/*   ft_stack_len_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 22:11:05 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 22:12:01 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 22:12:14 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 17:31:51 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-int	ft_is_sorted(t_stack *stack)
+int	ft_stack_len(t_stack *stack)
 {
-	if (!stack)
-		return (1);
-	while (stack->next)
+	int	len;
+
+	len = 0;
+	while (stack)
 	{
-		if (stack->value > stack->next->value)
-			return (0);
+		len++;
 		stack = stack->next;
 	}
-	return (1);
+	return (len);
 }

@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_stack.c                                    :+:      :+:    :+:   */
+/*   ft_free_stack_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 22:06:08 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 11:11:53 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/22 16:54:04 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 22:42:20 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-void	ft_init_stack(t_stack **a, int argc, char **argv)
+void	ft_free_stack(t_stack *s)
 {
-	int		i;
-	int		j;
-	char	**split;
+	t_stack	*temp;
 
-	i = 1;
-	j = 0;
-	if (argc >= 2)
+	while (s)
 	{
-		while (i < argc)
-		{
-			j = 0;
-			split = ft_split(argv[i]);
-			while (split && split[j])
-			{
-				add_node_back(a, ft_atoi(split[j]));
-				j++;
-			}
-			i ++;
-		}
+		temp = s;
+		s = s->next;
+		free(temp);
 	}
 }

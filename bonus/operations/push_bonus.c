@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   swap.c                                             :+:      :+:    :+:   */
+/*   push_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 21:24:27 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 22:05:28 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 21:16:20 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 17:30:44 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-void	swap(t_stack **stack)
+void	push(t_stack **from, t_stack **to)
 {
-	t_stack	*second;
-	t_stack	*first;
+	t_stack	*to_move;
 
-	if (*stack && (*stack)->next)
+	to_move = NULL;
+	if (*from)
 	{
-		first = (*stack);
-		second = (*stack)->next;
-		first->next = second->next;
-		second->next = first;
-		(*stack) = second;
+		to_move = *from;
+		if ((*from)->next)
+			(*from)->next->prev = NULL;
+		*from = (*from)->next;
+		if (*to)
+			(*to)->prev = to_move;
+		to_move->next = *to;
+		to_move->prev = NULL;
+		*to = to_move;
 	}
 }
 
-void	sa(t_stack **a)
+void	pa(t_stack **a, t_stack **b)
 {
-	swap(a);
+	push(b, a);
 }
 
-void	sb(t_stack **b)
+void	pb(t_stack **b, t_stack **a)
 {
-	swap(b);
-}
-
-void	ss(t_stack **a, t_stack **b)
-{
-	swap(a);
-	swap(b);
+	push(a, b);
 }

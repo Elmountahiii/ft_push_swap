@@ -1,51 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rotate.c                                           :+:      :+:    :+:   */
+/*   reversRotate_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 21:21:58 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 21:24:20 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 21:18:43 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 17:31:00 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
-void	rotate(t_stack **stack)
+void	revers_rotate(t_stack **stack)
 {
-	t_stack	*first;
 	t_stack	*last;
+	t_stack	*second_last;
 
-	first = NULL;
-	last = NULL;
 	if (*stack && (*stack)->next)
 	{
-		first = *stack;
-		*stack = (*stack)->next;
-		(*stack)->prev = NULL;
-		first->next = NULL;
-		first->prev = NULL;
 		last = *stack;
 		while (last->next)
+		{
+			second_last = last;
 			last = last->next;
-		last->next = first;
-		first->prev = last;
+		}
+		second_last->next = NULL;
+		last->prev = NULL;
+		last->next = *stack;
+		(*stack)->prev = last;
+		*stack = last;
 	}
 }
 
-void	ra(t_stack **a)
+void	rra(t_stack **a)
 {
-	rotate(a);
+	revers_rotate(a);
 }
 
-void	rb(t_stack **b)
+void	rrb(t_stack **b)
 {
-	rotate(b);
+	revers_rotate(b);
 }
 
-void	rr(t_stack **a, t_stack **b)
+void	rrr(t_stack **a, t_stack **b)
 {
-	rotate(a);
-	rotate(b);
+	revers_rotate(a);
+	revers_rotate(b);
 }

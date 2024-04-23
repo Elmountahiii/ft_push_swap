@@ -1,42 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push.c                                             :+:      :+:    :+:   */
+/*   main_bonus.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/21 21:16:20 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/21 21:18:33 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 20:10:32 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 22:45:27 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "checker_bonus.h"
 
-void	push(t_stack **from, t_stack **to)
+int	main(int argc, char **argv)
 {
-	t_stack	*to_move;
+	t_stack	*a;
+	t_stack	*b;
 
-	to_move = NULL;
-	if (*from)
+	a = NULL;
+	b = NULL;
+	if (argc < 2)
+		return (0);
+	ft_init_stack(&a, argc, argv);
+	if (ft_is_duplicated(a))
+			ft_exit("Error\n", 1);
+	ft_read_instruction(&a, &b);
+	if (ft_stack_len(b) == 0 && ft_is_sorted(a))
 	{
-		to_move = *from;
-		if ((*from)->next)
-			(*from)->next->prev = NULL;
-		*from = (*from)->next;
-		if (*to)
-			(*to)->prev = to_move;
-		to_move->next = *to;
-		to_move->prev = NULL;
-		*to = to_move;
+		ft_free_stack(a);
+		ft_exit("OK\n", 0);
 	}
-}
-
-void	pa(t_stack **a, t_stack **b)
-{
-	push(b, a);
-}
-
-void	pb(t_stack **b, t_stack **a)
-{
-	push(a, b);
+	else
+	{
+		ft_free_stack(a);
+		ft_exit("KO\n", 1);
+	}
+	return (0);
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_check_instruction.c                             :+:      :+:    :+:   */
+/*   ft_check_instruction_bonus.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:17:07 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 11:46:55 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/23 22:38:35 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../checker.h"
+#include "../checker_bonus.h"
 
 void	ft_check_instruction(t_stack **a, t_stack **b, char *str)
 {
@@ -38,4 +38,5 @@ void	ft_check_instruction(t_stack **a, t_stack **b, char *str)
 		rr(a, b);
 	else
 		ft_exit("Error\n", 1);
+	free(str);
 }

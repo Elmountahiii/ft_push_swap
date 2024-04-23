@@ -1,21 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.h                                          :+:      :+:    :+:   */
+/*   checker_bonus.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:13:32 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 16:26:16 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/23 22:39:12 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CHECKER_H
-# define CHECKER_H
+#ifndef CHECKER_BONUS_H
+# define CHECKER_BONUS_H
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include <limits.h>
 # include "../lib/lib.h"
 
@@ -57,4 +56,6 @@ void	ft_print(char *str);
 char	**ft_split(char *str);
 void	ft_check_instruction(t_stack **a, t_stack **b, char *str);
 int		ft_stack_len(t_stack *stack);
+void	ft_free_stack(t_stack *s);
+void	ft_read_instruction(t_stack **a, t_stack **b);
 #endif

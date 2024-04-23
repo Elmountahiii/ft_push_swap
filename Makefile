@@ -1,5 +1,4 @@
 NAME = push_swap
-NAME_BONUS = checker
 CC = cc
 CFLAGS = -Wall -Wextra -Werror -g
 SRC =  main.c mandatory/nodeUtils/add_node_back.c mandatory/nodeUtils/create_node.c mandatory/nodeUtils/ft_setup_nodes.c \
@@ -14,17 +13,15 @@ RM = rm -rf
 
 all: $(NAME)
 
-bonus : $(NAME_BONUS)
+bonus : 
+	@make -C bonus/
 
 %.o : %.c $(HEADER)
 	$(CC) $(CFLAGS) -c $< -o $@
 
-$(NAME): $(OBJ) lib/*.c
+$(NAME): $(OBJ) lib/*.c lib/*.h
 	@cd lib && make
 	$(CC) $(CFLAGS) $(OBJ) lib/lib.a -o $(NAME)
-
-$(NAME_BONUS) : 
-		cd bonus && make
 
 clean:
 	$(RM) $(OBJ)
@@ -38,4 +35,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

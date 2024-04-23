@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_sort.c                                          :+:      :+:    :+:   */
+/*   ft_is_sorted_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/22 13:47:11 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 14:27:57 by yel-moun         ###   ########.fr       */
+/*   Created: 2024/04/21 22:11:05 by yel-moun          #+#    #+#             */
+/*   Updated: 2024/04/23 17:31:42 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../checker_bonus.h"
 
-void	ft_sort(t_stack **a, t_stack **b)
+int	ft_is_sorted(t_stack *stack)
 {
-	t_stack	*stack_min;
-
-	while (*b)
+	if (!stack)
+		return (1);
+	while (stack->next)
 	{
-		ft_setup_nodes(a, b);
-		ft_push_best(a, b);
+		if (stack->value > stack->next->value)
+			return (0);
+		stack = stack->next;
 	}
-	ft_update_stack_index(*a, *b);
-	ft_update_positions(*a, *b);
-	stack_min = ft_stack_min(*a);
-	ft_rotate_move(a, stack_min, ra, rra);
-	ft_update_stack_index(*a, *b);
+	return (1);
 }
