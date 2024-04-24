@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:54:21 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 14:54:39 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:49:29 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_exit(char *str, int status)
 {
-	ft_print(str);
+	ft_print(str, status);
 	exit(status);
 }

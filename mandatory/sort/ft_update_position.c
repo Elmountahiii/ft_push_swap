@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:50:16 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 13:52:01 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 12:24:10 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	ft_update_positions(t_stack *a, t_stack *b)
 
 	a_len = ft_stack_len(a) / 2;
 	b_len = ft_stack_len(b) / 2;
+	ft_update_stack_index(a, b);
 	while (a)
 	{
 		if (a->index <= a_len)

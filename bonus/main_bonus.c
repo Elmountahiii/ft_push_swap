@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:10:32 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 22:45:27 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:18:46 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 		return (0);
 	ft_init_stack(&a, argc, argv);
 	if (ft_is_duplicated(a))
-			ft_exit("Error\n", 1);
+		ft_exit("Error\n", 2);
 	ft_read_instruction(&a, &b);
 	if (ft_stack_len(b) == 0 && ft_is_sorted(a))
 	{

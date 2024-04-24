@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 13:48:37 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 13:50:11 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:10:27 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,6 @@ void	ft_split_stack(t_stack **a, t_stack **b, int len)
 	i = 0;
 	if (len == 3)
 		return ;
-	if (len == 5)
-	{
-		pb(b, a);
-		pb(b, a);
-		return ;
-	}
 	while (i < len)
 	{
 		average = ft_get_stack_average(*a);

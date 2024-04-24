@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:56:06 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 15:59:07 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:49:43 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,11 +34,11 @@ void	push(t_stack **from, t_stack **to)
 void	pa(t_stack **a, t_stack **b)
 {
 	push(b, a);
-	ft_print("pa\n");
+	ft_print("pa\n", 1);
 }
 
 void	pb(t_stack **b, t_stack **a)
 {
 	push(a, b);
-	ft_print("pb\n");
+	ft_print("pb\n", 1);
 }

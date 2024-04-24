@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 11:59:08 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 15:26:53 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:49:55 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,18 +36,18 @@ void	revers_rotate(t_stack **stack)
 void	rra(t_stack **a)
 {
 	revers_rotate(a);
-	ft_print("rra\n");
+	ft_print("rra\n", 1);
 }
 
 void	rrb(t_stack **b)
 {
 	revers_rotate(b);
-	ft_print("rrb\n");
+	ft_print("rrb\n", 1);
 }
 
 void	rrr(t_stack **a, t_stack **b)
 {
 	revers_rotate(a);
 	revers_rotate(b);
-	ft_print("rrr\n");
+	ft_print("rrr\n", 1);
 }

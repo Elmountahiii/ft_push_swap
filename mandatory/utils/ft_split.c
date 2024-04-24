@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:55:12 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 13:13:33 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 10:54:49 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	**ft_split(char *str)
 
 	len = count_words(str);
 	if (len == 0)
-		ft_exit("Error\n", 1);
+		ft_exit("Error\n", 2);
 	split = malloc(sizeof(char *) * (len + 1));
 	i = 0;
 	index = 0;

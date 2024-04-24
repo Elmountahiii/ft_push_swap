@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:17:07 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 22:38:35 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:16:45 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ void	ft_check_instruction(t_stack **a, t_stack **b, char *str)
 	else if (!ft_strncmp("rr\n", str, 3))
 		rr(a, b);
 	else
-		ft_exit("Error\n", 1);
+		ft_exit("Error\n", 2);
 	free(str);
 }

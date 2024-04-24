@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:14:07 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 19:49:17 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:14:13 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	ft_mark_best(t_stack *stack)
 			stack->best_move = 0;
 		stack = stack->next;
 	}
-	if(best_node)
+	if (best_node)
 		best_node->best_move = 1;
 }

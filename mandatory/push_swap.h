@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 15:00:46 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 17:22:27 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:48:51 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ void	revers_rotate(t_stack **stack);
 void	rra(t_stack **a);
 void	rrb(t_stack **b);
 void	rrr(t_stack **a, t_stack **b);
-void	ft_print(char *str);
+void	ft_print(char *str, int fd);
 void	ft_exit(char *str, int status);
 int		count_words(char *str);
 char	**ft_split(char *str);

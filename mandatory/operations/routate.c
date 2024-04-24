@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:00:37 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 12:01:40 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 11:50:14 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ void	rotate(t_stack **stack)
 void	ra(t_stack **a)
 {
 	rotate(a);
-	ft_print("ra\n");
+	ft_print("ra\n", 1);
 }
 
 void	rb(t_stack **b)
 {
 	rotate(b);
-	ft_print("rb\n");
+	ft_print("rb\n", 1);
 }
 
 void	rr(t_stack **a, t_stack **b)
 {
 	rotate(a);
 	rotate(b);
-	ft_print("rr\n");
+	ft_print("rr\n", 1);
 }

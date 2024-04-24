@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 14:53:58 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/22 14:53:59 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 10:54:49 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	extra_check(int *sign, char *c, int *i)
 		(*i)++;
 	}
 	if (c[*i] == '\0' || !ft_is_nbr(c[*i]))
-		ft_exit("Error\n", 1);
+		ft_exit("Error\n", 2);
 }
 
 int	ft_atoi(char *nbr)
@@ -43,10 +43,10 @@ int	ft_atoi(char *nbr)
 			result = result * 10 + (nbr[i] - '0');
 			if (((result < temp) && sign > 0)
 				|| ((result < temp) && sign < 0 && result != INT_MIN))
-				ft_exit("Error\n", 1);
+				ft_exit("Error\n", 2);
 		}
 		else
-			ft_exit("Error\n", 1);
+			ft_exit("Error\n", 2);
 		i++;
 	}
 	return (result * sign);

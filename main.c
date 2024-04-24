@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 19:39:01 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 17:22:08 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 13:19:07 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	main(int argc, char **argv)
 	{
 		ft_free_stack(a);
 		ft_free_stack(b);
-		ft_exit("Error\n", 1);
+		ft_exit("Error\n", 2);
 	}
-	else if(ft_is_sorted(a))
+	else if (ft_is_sorted(a))
 	{
 		ft_free_stack(a);
 		ft_free_stack(b);
