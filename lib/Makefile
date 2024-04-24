@@ -1,5 +1,5 @@
-SRC = $(wildcard *.c) $(wildcard get_nex_line/*.c)
-
+SRC = ft_get_sign.c ft_is_nbr.c ft_is_sign.c ft_is_space.c \
+ft_strlen.c ft_strncmp.c ft_substr.c get_nex_line/get_next_line_utils.c get_nex_line/get_next_line.c
 CC = cc
 CFLAGS = -Wall -Werror -Wextra
 OBJ = $(SRC:.c=.o)

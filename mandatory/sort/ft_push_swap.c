@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 12:20:55 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/24 13:15:02 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 15:47:03 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,12 @@ void	ft_push_swap(t_stack **a, t_stack **b)
 	}
 	else if (ft_stack_len(*a) == 5)
 	{
+		ft_update_stack_index(*a, *b);
+		ft_update_positions(*a, *b);
 		ft_rotate_move(a, ft_stack_min(*a), ra, rra);
 		pb(b, a);
+		ft_update_stack_index(*a, *b);
+		ft_update_positions(*a, *b);
 		ft_rotate_move(a, ft_stack_min(*a), ra, rra);
 		pb(b, a);
 		ft_sort_3(a);

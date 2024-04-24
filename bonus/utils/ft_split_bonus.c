@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 22:21:39 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/23 17:32:58 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:59:15 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,34 +33,57 @@ int	count_words(char *str)
 				i++;
 		}
 	}
+	if (words == 0)
+		ft_exit("Error\n", 2);
 	return (words);
 }
 
-char	**ft_split(char *str)
+void	free_arr(char **split, int c)
 {
-	char	**split;
+	int	i;
+
+	i = 0;
+	while (i < c)
+	{
+		free(split[i++]);
+	}
+	free(split);
+	ft_exit("Error\n", 2);
+}
+
+void	split_part1(char **str, char ***split)
+{
 	int		i;
 	int		index;
-	int		len;
+	char	*tmp;
 
-	len = count_words(str);
-	if (len == 0)
-		ft_exit("Error : split", 1);
-	split = malloc(sizeof(char *) * (len + 1));
-	i = 0;
 	index = 0;
-	if (!split)
-		return (NULL);
-	while (str[i])
+	i = 0;
+	while ((*str)[i])
 	{
-		if (str[i] && !is_space(str[i]))
+		if ((*str)[i] && !is_space((*str)[i]))
 		{
-			split[index++] = ft_substr(str, i);
-			while (str[i] && !is_space(str[i]))
+			tmp = ft_substr((*str), i);
+			if (tmp)
+				(*split)[index++] = tmp;
+			else
+				free_arr(*split, index);
+			while ((*str)[i] && !is_space((*str)[i]))
 				i ++;
 		}
 		else
 			i++;
 	}
-	return (split[index] = NULL, split);
+	(*split)[index] = NULL;
+}
+
+char	**ft_split(char *str)
+{
+	char	**split;
+
+	split = malloc(sizeof(char *) * (count_words(str) + 1));
+	if (!split)
+		return (NULL);
+	split_part1(&str, &split);
+	return (split);
 }

@@ -6,7 +6,7 @@
 /*   By: yel-moun <yel-moun@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/21 20:10:32 by yel-moun          #+#    #+#             */
-/*   Updated: 2024/04/24 13:18:46 by yel-moun         ###   ########.fr       */
+/*   Updated: 2024/04/24 18:04:40 by yel-moun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		ft_free_stack(a);
+		ft_free_stack(b);
 		ft_exit("KO\n", 1);
 	}
 	return (0);
